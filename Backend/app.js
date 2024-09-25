@@ -52,7 +52,7 @@ mongoose
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@officeprojectcluster.rtwgnbh.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=officeProjectCluster`
   )
   .then(() => {
-    app.listen(3000, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Server is running and connected to database");
     });
   })
